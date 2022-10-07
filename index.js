@@ -10,7 +10,6 @@ const router = require('./routes/index.js')
 console.log('t', dotenv.config())
 
 const app = express()
-
 app.get('/', (req, res) => {
   res.json({ message: 'hi' })
 })
