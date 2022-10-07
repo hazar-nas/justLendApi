@@ -14,7 +14,6 @@ const app = express()
 app.get('/', (req, res) => {
   res.json({ message: 'hi' })
 })
-
 app.use(cors({ credentials: true }))
 app.use(cookieParser())
 app.use(express.json())

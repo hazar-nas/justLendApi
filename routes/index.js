@@ -10,5 +10,4 @@ router.post('/register', Register)
 router.post('/login', Login)
 router.get('/token', refreshToken)
 router.delete('/logout', Logout)
-
 module.exports = router

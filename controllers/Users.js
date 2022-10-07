@@ -1,7 +1,6 @@
 const Users = require('../models/UserModel.js')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-
 const getUsers = async (req, res) => {
   try {
     const users = await Users.findAll({
