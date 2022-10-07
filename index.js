@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 app.use(
   cors({
     credentials: true,
-    origin: 'https://main--lovely-dieffenbachia-81aa0c.netlify.app/',
+    origin: 'http://lovely-dieffenbachia-81aa0c.netlify.app/',
   })
 )
 app.use(cookieParser())
@@ -23,7 +23,8 @@ app.use(express.json())
 
 app.use(router)
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`)
-})
+app.listen(5000, () => console.log('runnde'))
+// const PORT = process.env.PORT || 5000
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}.`)
+// })
