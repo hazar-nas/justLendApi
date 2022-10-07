@@ -6,7 +6,9 @@ import db from './config/Database.js'
 import router from './routes/index.js'
 // import path from 'path'
 // import findConfig from 'f'
+
 dotenv.config()
+
 const app = express()
 
 app.get('/', (req, res) => {
