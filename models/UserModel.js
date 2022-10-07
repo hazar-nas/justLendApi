@@ -1,5 +1,5 @@
-import { Sequelize } from 'sequelize'
-import db from '../config/Database.js'
+const Sequelize = require('sequelize')
+const db = require('../config/Database')
 
 const { DataTypes } = Sequelize
 
@@ -28,4 +28,4 @@ const Users = db.define(
   await db.sync()
 })()
 
-export default Users
+module.exports = Users
