@@ -7,13 +7,11 @@ const router = require('./routes/index.js')
 // const path =require( 'path'
 // const findConfig =require( 'f'
 
-console.log('t', dotenv.config())
-
 const app = express()
 app.get('/', (req, res) => {
   res.json({ message: 'hi' })
 })
-app.use(cors({ credentials: true }))
+app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
 
