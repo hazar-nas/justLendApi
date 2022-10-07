@@ -11,10 +11,10 @@ const app = express()
 app.get('/', (req, res) => {
   res.json({ message: 'hi' })
 })
-const corsOptions = {
-  origin: 'https://main--lovely-dieffenbachia-81aa0c.netlify.app/',
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
+var corsOptions = {
+  origin: 'https://main--lovely-dieffenbachia-81aa0c.netlify.app',
+  optionsSuccessStatus: 200, // For legacy browser support
+  methods: 'GET, POST, DELETE, PUT',
 }
 app.use(cors(corsOptions))
 app.use(cookieParser())
