@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 app.use(cors({ credentials: true }))
 app.use(cookieParser())
 app.use(express.json())
+
 app.use(router)
 
 const PORT = process.env.PORT || 5000
