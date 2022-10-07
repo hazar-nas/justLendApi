@@ -9,6 +9,10 @@ import router from './routes/index.js'
 dotenv.config()
 const app = express()
 
+app.get('/', (req, res) => {
+  res.json({ message: server })
+})
+
 app.use(cors({ credentials: true }))
 app.use(cookieParser())
 app.use(express.json())
