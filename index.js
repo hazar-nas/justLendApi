@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 app.use(
   cors({
     credentials: true,
-    origin: 'http://lovely-dieffenbachia-81aa0c.netlify.app/',
+    origin: 'https://main--lovely-dieffenbachia-81aa0c.netlify.app/',
   })
 )
 app.use(cookieParser())
