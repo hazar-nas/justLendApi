@@ -10,18 +10,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'hi' })
 })
 
-var allowlist = ['https://main--lovely-dieffenbachia-81aa0c.netlify.app/']
-var corsOptionsDelegate = function (req, callback) {
-  var corsOptions
-  if (allowlist.indexOf(req.header('Origin')) !== -1) {
-    corsOptions = { origin: true }
-  } else {
-    corsOptions = { origin: false }
-  }
-  callback(null, corsOptions)
-}
-
-app.use(cors(corsOptionsDelegate))
+app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
 
